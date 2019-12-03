@@ -1,0 +1,15 @@
+@mixin flex-property($dirextion, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+.part_1 {
+    @include flex-property(row, center, center);
+    background-color: blueviolet;
+    .news_related {
+        @include flex-property(column, center, center);
+        background-color: burlywood;
+    }
+}
